@@ -28,6 +28,14 @@ public class StartSelenium {
         wd.findElement(By.linkText("HOME"));//найти элемент
         wd.findElement(By.partialLinkText("HO"));//найти что то с частью текста
         wd.findElement(By.id("root"));
+        //============================CW===============================
+        wd.findElement(By.cssSelector("[href='/login']"));
+        wd.findElement(By.cssSelector("[href^='/lo']"));//начинается с текста
+        wd.findElement(By.cssSelector("[href*='og']"));//все элементы содержащие "og"
+        wd.findElement(By.cssSelector("[href$='gin']"));//элемент заканчивающийся на "gin"
+        List<WebElement> buttons = wd.findElements(By.tagName("button"));
+
+
     }
 
     @Test

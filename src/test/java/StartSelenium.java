@@ -28,12 +28,24 @@ public class StartSelenium {
         wd.findElement(By.linkText("HOME"));//найти элемент
         wd.findElement(By.partialLinkText("HO"));//найти что то с частью текста
         wd.findElement(By.id("root"));
+
         //============================CW===============================
         wd.findElement(By.cssSelector("[href='/login']"));
         wd.findElement(By.cssSelector("[href^='/lo']"));//начинается с текста
         wd.findElement(By.cssSelector("[href*='og']"));//все элементы содержащие "og"
         wd.findElement(By.cssSelector("[href$='gin']"));//элемент заканчивающийся на "gin"
         List<WebElement> buttons = wd.findElements(By.tagName("button"));
+
+        //=============================HW22.11.2022====================
+        wd.findElement(By.cssSelector("[href='/about']"));
+        wd.findElement(By.cssSelector("[href^='/abo']"));
+        wd.findElement(By.cssSelector("[href$='ut']"));
+        wd.findElement(By.cssSelector("[href*='bou']"));
+        wd.findElement(By.cssSelector("[href='/home']"));
+        wd.findElement(By.cssSelector("[href^='/ho']"));
+        wd.findElement(By.cssSelector("[href*='ome']"));
+        wd.findElement(By.cssSelector("[class='container']"));
+        wd.findElement(By.cssSelector("#[root]"));
 
 
     }

@@ -36,24 +36,27 @@ public class TableTest {
         }
         System.out.println(text.contains("Mexico"));
 
-        //-------------------------------------
+        //-------------------HW------------------
         List<WebElement> lastCol = wd.findElements(By.cssSelector("#customers td.last-child"));
         for (WebElement e: lastCol){
             System.out.println(e.getText());//sout
         }
 
         List<WebElement> tr = wd.findElements(By.cssSelector("#customers tr"));
-        int count = 0;
         for (int i = 0; i < tr.size(); i++){
 
             if(tr.get(i).getText().contains("Philip Cramer")){
                 System.out.println(i+1);
-                return;
+               // return;
             }
 
         }
-
+        List<WebElement> th = wd.findElements(By.cssSelector("#customers th"));
+        System.out.println(th.size());
+        Assert.assertEquals(th.size(),3);
     }
+
+
 
     @AfterMethod
     public void tearDown(){
